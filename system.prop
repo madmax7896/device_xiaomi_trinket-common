@@ -66,3 +66,13 @@ ro.oem_unlock_supported=1
 # WFD
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
+
+# Misc
+ro.com.google.clientidbase=android-xiaomi
+ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html
+ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html
+ro.setupwizard.enterprise_mode=1
+setupwizard.feature.predeferred_enabled=false
+ro.setupwizard.mode=OPTIONAL
+ro.control_privapp_permissions=log
+

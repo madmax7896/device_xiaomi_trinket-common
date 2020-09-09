@@ -5,6 +5,11 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+LOCAL_PATH := device/xiaomi/trinket-common
+
+# Qcom utils
+$(call inherit-product, $(LOCAL_PATH)/utils.mk)
+
 # Vendor blobs
 $(call inherit-product, vendor/xiaomi/trinket-common/trinket-common-vendor.mk)
 
@@ -75,7 +80,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     vendor.qti.hardware.camera.device@1.0.vendor \
-    libdng_sdk.vendor
+    libdng_sdk.vendor \
+    Camera2
 
 # Context Hub
 PRODUCT_PACKAGES += \
@@ -417,3 +423,16 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# World APN list
+PRODUCT_PACKAGES += \
+    $(LOCAL_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
+
+# Props
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.build.selinux=1 \
+    persist.sys.disable_rescue=true \
+    media.recorder.show_manufacturer_and_model=true \
+    ro.storage_manager.enabled=true \
+    net.tethering.noprovisioning=true
+
