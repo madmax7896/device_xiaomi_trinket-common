@@ -432,8 +432,8 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 # World APN list
-PRODUCT_PACKAGES += \
-    $(LOCAL_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/apns-conf.xml
 
 # Props
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
