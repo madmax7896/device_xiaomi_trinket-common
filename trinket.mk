@@ -438,7 +438,7 @@ PRODUCT_PACKAGES += \
     libqdMetaData.vendor \
     vendor.display.config@2.0
 
-#PRODUCT_BOOT_JARS += \
+PRODUCT_BOOT_JARS += \
     WfdCommon
 
 # World APN list
