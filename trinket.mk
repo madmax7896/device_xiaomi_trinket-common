@@ -443,16 +443,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
-
-# World APN list
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/apns-conf.xml
-
-# Props
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.build.selinux=1 \
-    persist.sys.disable_rescue=true \
-    media.recorder.show_manufacturer_and_model=true \
-    ro.storage_manager.enabled=true \
-    net.tethering.noprovisioning=true
-
