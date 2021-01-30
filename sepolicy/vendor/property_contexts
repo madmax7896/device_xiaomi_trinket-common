@@ -16,3 +16,7 @@ ro.cust.test                u:object_r:exported_default_prop:s0
 # Thermal
 sys.thermal.                u:object_r:thermal_engine_prop:s0
 persist.sys.thermal.        u:object_r:thermal_engine_prop:s0
+
+# Accent Picker
+persist.sys.theme.accentcolor                 u:object_r:theme_prop:s0
+persist.sys.theme.gradientcolor               u:object_r:theme_prop:s0
